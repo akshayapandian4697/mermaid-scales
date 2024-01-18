@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AkshayaGunasekaraPandian_BookStore.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Mermaid Tales Bookstore</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body class="p-3 mb-2 bg-light text-black">
+    <form id="form1" runat="server">
+        <div>
+            <br /><br />
+            <div class="d-flex flex-row justify-content-center">
+                <asp:Image ID="imgBanner" runat="server" ImageUrl="~/Img/banner.png" Height="200px" Width="500px" />
+            </div><br />
+            <div id="navbar" class="d-flex flex-row justify-content-evenly align-items-center">
+                <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-dark" OnClick="btnHome_Click" width="150px"/>
+                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-dark" OnClick="btnLogin_Click" width="150px"/>
+                <asp:Button ID="btnAdmin" runat="server" Text="Admin" CssClass="btn btn-dark" OnClick="btnAdmin_Click" width="150px"/>
+                <asp:Button ID="btnProducts" runat="server" Text="Products" CssClass="btn btn-dark" OnClick="btnProducts_Click" width="150px"/>
+                <asp:Button ID="btnCart" runat="server" Text="Cart" CssClass="btn btn-dark" OnClick="btnCart_Click" width="150px"/>
+            </div><br /><br /><br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>
+        <br /><br /><p class="d-flex flex-row justify-content-center text-muted mb-0 py-2">Mermaid Tales Bookstore © Copyright reserved - Akshaya Gunasekara Pandian</p><br />
+    </footer>
+</body>
+</html>
